@@ -1,0 +1,157 @@
+/*Soft reset do CSS*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+body {
+    background-image: url("https://img.freepik.com/free-vector/abstract-technology-particle-background_52683-25766.jpg?size=626&ext=jpg");
+    background-size: auto 100vh;
+    background-repeat: repeat-y;
+    font-family: Arial;
+    height: 100vh;
+  }
+  @media (min-width: 950px) {
+    body{
+      background-size: 100vw 100vh;
+    }
+  }
+  /*@media significa se (altura for pelo menos: tantos pixels) { algo vai acontecer como: font-size: tantos pixels*/ 
+    /* Se a tela tiver pelo menos 400px o site vai carregar esses estilos!*/
+    /* breakpoints= pontos de quebra/transisão */
+  @media (min-width: 400px){
+    body {
+      font-size: 20px;
+    }
+  }
+  header {
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+  }
+  .menu {
+    background-color: whitesmoke;
+    position: fixed;
+    width: 100vw;
+    top: 0px;
+    z-index: 1;
+  }
+
+  .menu li {
+    list-style: none;
+  }
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu a {
+    display: block;
+    padding: 10px 20px;
+  }
+  .menu a:active,
+  .menu a:hover {
+    background-color: teal;
+    color: whitesmoke;
+    transition: background-color 1s, color 1s;
+  }
+  a{
+    color: teal;
+    text-decoration: none;
+  }
+  a:active,
+  a:hover {
+    color: teal;
+    text-decoration: underline;
+  }
+  .site-title {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Bangers', cursive;
+  }
+  .site-subtitle{
+    color: whitesmoke;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5em;
+    font-family: 'Handlee', cursive;
+  }
+  .titulo {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: 2s linear .5s animacaoTitulo forwards ;
+  }
+  @keyframes animacaoTitulo {
+    100% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+  .sobre,
+  .contato,
+  .hobbies {
+    padding: 2em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    color: whitesmoke;
+    min-height: 100vh;
+  }
+  .img-hobbies {
+    width: 220px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 500ms;
+  }
+  .img-hobbies:hover {
+    transform: scale(1.2) rotate(-2deg);
+  }
+  .contato,
+  .hobbies h2 {
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+    margin-bottom: 1em;
+  }
+  .hobbies .grid {
+    display: grid;
+    gap: 1.5em;
+  }
+  @media (min-width: 560px){
+    .hobbies .grid {
+      grid-template-columns: 240px 240px;
+  }
+}
+  @media (min-width: 880px){
+    .hobbies .grid {
+      grid-template-columns: 240px 240px 240px;
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 4em - 48px - 1em);
+  }
+}
+  .hobbies figure {
+    text-align: center;
+  }
+  @media (min-width: 1200px) {
+    .img-hobbies{
+    height: auto;
+    width: 100%;
+    }
+  }
+  .contato .grid {
+    text-align: center;
+    text-shadow: whitesmoke ;
+  }
+  .contato a{
+    color: whitesmoke;
+    font-size: 4em;
+    transition: text-shadow 1s;
+  }
+  .contato a:active,
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgb(255,255,255,.5)
+  }
